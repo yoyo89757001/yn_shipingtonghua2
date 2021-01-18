@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_dialog_write"
+    android:layout_marginTop="2dp"
+    android:layout_marginLeft="6dp"
+    android:layout_marginRight="6dp"
+    android:layout_marginBottom="2dp"
+    android:layout_height="44dp">
+
+    <LinearLayout
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.qmuiteam.qmui.widget.QMUIFontFitTextView
+            app:qmui_maxTextSize="10sp"
+            app:qmui_minTextSize="6sp"
+            android:gravity="center"
+            android:textColor="#888888"
+            android:id="@+id/xingming"
+            android:text="李建纲"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <com.qmuiteam.qmui.widget.QMUIFontFitTextView
+            app:qmui_maxTextSize="10sp"
+            app:qmui_minTextSize="6sp"
+            android:gravity="center"
+            android:textColor="#888888"
+            android:text="男"
+            android:id="@+id/xingbie"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+
+        <com.qmuiteam.qmui.widget.QMUIFontFitTextView
+            app:qmui_maxTextSize="10sp"
+            app:qmui_minTextSize="6sp"
+            android:gravity="center"
+            android:textColor="#888888"
+            android:text="F203"
+            android:id="@+id/fanghao"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <com.qmuiteam.qmui.widget.QMUIFontFitTextView
+            app:qmui_maxTextSize="10sp"
+            app:qmui_minTextSize="6sp"
+            android:gravity="center"
+            android:textColor="#888888"
+            android:text="01"
+            android:id="@+id/chuanghao"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <com.qmuiteam.qmui.widget.QMUIFontFitTextView
+            app:qmui_maxTextSize="10sp"
+            app:qmui_minTextSize="6sp"
+            android:gravity="center"
+            android:id="@+id/kaishi"
+            android:textColor="#888888"
+            android:text="12月11日 12:20"
+            android:layout_weight="1.6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <com.qmuiteam.qmui.widget.QMUIFontFitTextView
+            app:qmui_maxTextSize="10sp"
+            app:qmui_minTextSize="6sp"
+            android:gravity="center"
+            android:id="@+id/jieshu"
+            android:textColor="#888888"
+            android:text="12月11日 12:50"
+            android:layout_weight="1.6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <com.qmuiteam.qmui.layout.QMUIButton
+                android:textSize="10sp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:background="@color/colorPrimary"
+                android:text="开始"
+                android:id="@+id/caozuo"
+                android:layout_marginEnd="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="22dp"
+                tools:ignore="SmallSp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+        
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/hhjj"
+    android:layout_height="match_parent"
+    android:background="#06000000">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/colorPrimary"
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <ImageView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:id="@+id/ffaa"
+            android:src="@mipmap/a22"
+            android:layout_marginStart="16dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:tint="@color/white" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center_vertical|end"
+            android:id="@+id/shuaxin"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginEnd="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <TextView
+                android:text="12：11"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:id="@+id/shijian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="12：11"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp"
+                android:id="@+id/riqi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+        <com.qmuiteam.qmui.widget.QMUIFontFitTextView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/ffaa"
+            app:layout_constraintRight_toLeftOf="@+id/shuaxin"
+            android:textColor="#FFFFFFFF"
+            android:textSize="18sp"
+            app:qmui_maxTextSize="18sp"
+            app:qmui_minTextSize="8sp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="16dp"
+            android:id="@+id/myTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/eeww"
+        android:gravity="center"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="68dp">
+
+
+        <EditText
+            android:hint="请输入姓名或者床号"
+            android:textSize="14sp"
+            android:textColor="#333333"
+            android:id="@+id/eedit"
+            android:paddingStart="12dp"
+            android:textColorHint="#999999"
+            android:background="@drawable/zk_lan2"
+            android:layout_weight="3"
+            android:layout_marginStart="50dp"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            tools:ignore="RtlSymmetry" />
+
+        <Button
+            android:background="@drawable/zk_lan3"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:id="@+id/htte"
+            android:textColor="@color/white"
+            android:text="搜索"
+            android:layout_marginEnd="50dp"
+            android:layout_width="0dp"
+            android:layout_height="36dp"/>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:background="#14E6481D"
+        app:layout_constraintTop_toBottomOf="@+id/eeww"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/ghgh"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <LinearLayout
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginEnd="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/t1"
+                android:text="今天"
+                android:gravity="center"
+                android:textSize="10sp"
+                android:textColor="@color/white"
+                android:background="@drawable/zk_lanleft"
+                android:layout_width="44dp"
+                android:layout_height="24dp"/>
+
+
+            <TextView
+                android:id="@+id/t2"
+                android:text="明天"
+                android:layout_marginStart="-1dp"
+                android:layout_marginEnd="-1dp"
+                android:gravity="center"
+                android:textSize="10sp"
+                android:textColor="@color/colorPrimary"
+                android:background="@drawable/zk_lancent50"
+                android:layout_width="44dp"
+                android:layout_height="24dp"/>
+
+
+
+            <TextView
+                android:id="@+id/t3"
+                android:text="后天"
+                android:gravity="center"
+                android:textSize="10sp"
+                android:textColor="@color/colorPrimary"
+                android:background="@drawable/zk_lanright50"
+                android:layout_width="44dp"
+                android:layout_height="24dp"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <TextView
+        app:layout_constraintTop_toTopOf="@+id/ghgh"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/ghgh"
+        android:text="探视列表"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginStart="14dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="RtlSymmetry" />
+
+
+    <View
+        android:id="@+id/aeee"
+        android:background="#06000000"
+        app:layout_constraintTop_toBottomOf="@+id/ghgh"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <LinearLayout
+        android:id="@+id/fgg"
+        app:layout_constraintTop_toBottomOf="@+id/aeee"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="4dp"
+        android:background="@color/white"
+        android:paddingRight="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <com.qmuiteam.qmui.widget.QMUIFontFitTextView
+            app:qmui_maxTextSize="10sp"
+            app:qmui_minTextSize="8sp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="姓名"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <com.qmuiteam.qmui.widget.QMUIFontFitTextView
+            app:qmui_maxTextSize="10sp"
+            app:qmui_minTextSize="8sp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="性别"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+
+        <com.qmuiteam.qmui.widget.QMUIFontFitTextView
+            app:qmui_maxTextSize="10sp"
+            app:qmui_minTextSize="8sp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="房号"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <com.qmuiteam.qmui.widget.QMUIFontFitTextView
+            app:qmui_maxTextSize="10sp"
+            app:qmui_minTextSize="8sp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="床号"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <com.qmuiteam.qmui.widget.QMUIFontFitTextView
+            app:qmui_maxTextSize="10sp"
+            app:qmui_minTextSize="8sp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="开始时间"
+            android:layout_weight="1.6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <com.qmuiteam.qmui.widget.QMUIFontFitTextView
+            app:qmui_maxTextSize="10sp"
+            app:qmui_minTextSize="8sp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="结束时间"
+            android:layout_weight="1.6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <com.qmuiteam.qmui.widget.QMUIFontFitTextView
+            app:qmui_maxTextSize="10sp"
+            app:qmui_minTextSize="8sp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="操作"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fgg"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <com.scwang.smart.refresh.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

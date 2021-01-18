@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_dialog_write"
+    android:layout_marginTop="12dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="8dp"
+    android:layout_height="wrap_content">
+
+
+    <com.qmuiteam.qmui.widget.QMUIRadiusImageView2
+        android:id="@+id/d1122"
+        android:elevation="8dp"
+        app:qmui_corner_radius="8dp"
+        android:background="@mipmap/a11"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+
+    <com.qmuiteam.qmui.widget.QMUIRadiusImageView2
+        android:id="@+id/d11"
+        app:qmui_corner_radius="8dp"
+        android:elevation="10dp"
+        android:background="#60000000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:tint="#22222222" />
+
+
+    <TextView
+        android:id="@+id/name"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:text="刘菲菲 F302"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_dialog_write3"
+        app:layout_constraintTop_toTopOf="@+id/d11"
+        app:layout_constraintLeft_toLeftOf="@+id/d11"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"/>
+
+
+
+    <TextView
+        android:id="@+id/time"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_dialog_write2"
+        android:text="探视时间2020年11月11日\n 12:12 至 12:55"
+        app:layout_constraintTop_toTopOf="@+id/d11"
+        app:layout_constraintLeft_toLeftOf="@+id/d11"
+        app:layout_constraintRight_toRightOf="@+id/d11"
+        app:layout_constraintBottom_toBottomOf="@+id/d11"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"/>
+
+    <com.qmuiteam.qmui.layout.QMUIButton
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/d11"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="180dp"
+        android:text="探 视"
+        android:layout_marginBottom="18dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/queding"
+        android:background="@color/colorPrimary"
+        android:textSize="14sp"
+        android:textColor="#FFFFFF"
+        android:layout_height="42dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

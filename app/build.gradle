@@ -1,0 +1,78 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.example.yinian.menkou.ynshipingtonghua"
+        minSdkVersion 22
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        defaultConfig {
+            ndk {
+                abiFilters "armeabi", "armeabi-v7a" , "arm64-v8a"
+            }
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "eb905b957dffe93662b5e68f", //JPush 上注册的包名对应的 Appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    //设置某些动态库不被优化压缩。
+    packagingOptions {//打包配置
+        pickFirst '**/libc++_shared.so'
+        doNotStrip "*/armeabi/libYTCommon.so"
+        doNotStrip "*/armeabi-v7a/libYTCommon.so"
+        doNotStrip "*/x86/libYTCommon.so"
+        doNotStrip "*/arm64-v8a/libYTCommon.so"
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.0'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.alibaba:fastjson:1.2.48'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'com.sdsmdg.tastytoast:tastytoast:0.1.1'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    implementation 'com.tencent.bugly:crashreport_upgrade:1.4.2'//腾讯bugly
+    implementation 'com.tencent.bugly:nativecrashreport:3.7.3' //腾讯bugly
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'pub.devrel:easypermissions:3.0.0'
+    implementation 'com.tencent:mmkv-static:1.2.4'
+    implementation 'com.tencent.liteav:LiteAVSDK_TRTC:8.2.9809'
+    implementation 'me.jessyan:autosize:1.2.1'//头条适配
+    implementation 'com.qmuiteam:qmui:2.0.0-alpha10'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4'//适配器
+    implementation 'com.scwang.smart:refresh-layout-kernel:2.0.1'      //核心必须依赖
+    implementation 'com.scwang.smart:refresh-header-classics:2.0.1'    //经典刷新头
+    implementation 'cn.jiguang.sdk:jpush:3.8.6'  // 此处以JPush 3.6.6 版本为例。
+    implementation 'cn.jiguang.sdk:jcore:2.6.0'  // 此处以JCore 2.3.8 版本为例。
+}
