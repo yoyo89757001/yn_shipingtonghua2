@@ -188,7 +188,18 @@ public class PadZhiBoListActivity extends AppCompatActivity {//平板端直播�
         refreshLayout.setOnRefreshListener(new OnRefreshListener() {
             @Override
             public void onRefresh(@NotNull RefreshLayout refreshlayout) {
-                loginApiunBind(DateUtils.timeb(System.currentTimeMillis()+"")+" 00:00",DateUtils.timeb(System.currentTimeMillis()+"")+" 23:50","");
+                switch (type){
+                    case 1:
+                        loginApiunBind(DateUtils.timeb(System.currentTimeMillis()+"")+" 00:00",DateUtils.timeb(System.currentTimeMillis()+"")+" 23:50","");
+                        break;
+                    case 2:
+                        loginApiunBind(DateUtils.timeb(System.currentTimeMillis()+86400000+"")+" 00:00",DateUtils.timeb(System.currentTimeMillis()+86400000+"")+" 23:50","");
+                        break;
+                    case 3:
+                        loginApiunBind(DateUtils.timeb(System.currentTimeMillis()+172800000+"")+" 00:00",DateUtils.timeb(System.currentTimeMillis()+172800000+"")+" 23:50","");
+                        break;
+                }
+
             }
         });
 

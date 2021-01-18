@@ -24,8 +24,8 @@ public class MyApplication extends Application {
 
     public  static String SDPATH ;
     public static MyApplication myApplication;
-    //public static final String URL ="http://39.108.253.88:8082";
-    public static final String URL ="http://ni6c46.natappfree.cc";
+    public static final String URL ="http://39.108.253.88:8082";
+    //public static final String URL ="http://ni6c46.natappfree.cc";
 
 
 
