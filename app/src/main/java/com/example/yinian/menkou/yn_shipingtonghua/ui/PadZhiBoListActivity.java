@@ -265,13 +265,6 @@ public class PadZhiBoListActivity extends AppCompatActivity {//平板端直播�
                 QMUIButton but=baseViewHolder.getView(R.id.caozuo);
                 but.setRadius(QMUIDisplayHelper.dp2px(getContext(), 4));
                 but.setChangeAlphaWhenPress(true);//点击改变透明度
-                baseViewHolder.setText(R.id.fanghao,taskBean.getRoomName());
-                baseViewHolder.setText(R.id.xingming,taskBean.getElderName());
-                baseViewHolder.setText(R.id.chuanghao,taskBean.getBedName());
-                baseViewHolder.setText(R.id.kaishi,taskBean.getStartTime());
-                baseViewHolder.setText(R.id.jieshu,taskBean.getEndTime());
-                baseViewHolder.setText(R.id.xingbie,taskBean.getElderCode().equals("1") ? "男" : "女");
-
                 if (taskBean.isClick()){
                     baseViewHolder.setBackgroundResource(R.id.caozuo,R.color.colorPrimary);
                     baseViewHolder.setEnabled(R.id.caozuo,true);
@@ -279,6 +272,13 @@ public class PadZhiBoListActivity extends AppCompatActivity {//平板端直播�
                     baseViewHolder.setBackgroundResource(R.id.caozuo,R.color.rtc_title_bg);
                     baseViewHolder.setEnabled(R.id.caozuo,false);
                 }
+                baseViewHolder.setText(R.id.xingming,taskBean.getElderName());
+                baseViewHolder.setText(R.id.chuanghao,taskBean.getBedName());
+                baseViewHolder.setText(R.id.kaishi,taskBean.getStartTime());
+                baseViewHolder.setText(R.id.jieshu,taskBean.getEndTime());
+                baseViewHolder.setText(R.id.fanghao,taskBean.getRoomName());
+                baseViewHolder.setText(R.id.xingbie,taskBean.getElderCode().equals("1") ? "男" : "女");
+
 
             }catch (Exception e){
                 e.printStackTrace();
