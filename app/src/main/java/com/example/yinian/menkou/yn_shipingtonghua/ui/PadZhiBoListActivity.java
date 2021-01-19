@@ -277,7 +277,17 @@ public class PadZhiBoListActivity extends AppCompatActivity {//平板端直播�
                 baseViewHolder.setText(R.id.kaishi,taskBean.getStartTime());
                 baseViewHolder.setText(R.id.jieshu,taskBean.getEndTime());
                 baseViewHolder.setText(R.id.fanghao,taskBean.getRoomName());
-                baseViewHolder.setText(R.id.xingbie,taskBean.getElderCode().equals("1") ? "男" : "女");
+                String xb = null;
+                if (null==taskBean.getElderCode()){
+                    xb="未知";
+                }else {
+                    if (taskBean.getElderCode().equals("1")){
+                        xb="男";
+                    }else {
+                        xb="女";
+                    }
+                }
+                baseViewHolder.setText(R.id.xingbie,xb);
 
 
             }catch (Exception e){

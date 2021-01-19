@@ -252,9 +252,10 @@ public class RTCActivity extends AppCompatActivity implements View.OnClickListen
         // 进入通话
         mTRTCCloud.enterRoom(trtcParams, TRTC_APP_SCENE_VIDEOCALL);
         // 开启本地声音采集并上行
-        mTRTCCloud.startLocalAudio();
+        mTRTCCloud.startLocalAudio(2);
         // 开启本地画面采集并上行
         mTRTCCloud.startLocalPreview(mIsFrontCamera, mLocalPreviewView2);
+       // mTRTCCloud.setPriorRemoteVideoStreamType(TRTC_VIDEO_STREAM_TYPE_BIG);
 
     }
 

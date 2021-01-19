@@ -144,7 +144,6 @@ public class PhoneZhiBoListActivity extends AppCompatActivity {//手机端直播
                 baseViewHolder.setText(R.id.name,taskBean.getElderName()+"  "+taskBean.getRoomName());
                 baseViewHolder.setText(R.id.time,"探视时间"+taskBean.getVisitTime().split(" ")[0]+"\n"+taskBean.getStartTime()+"至"+taskBean.getEndTime());
 
-
             }catch (Exception e){
                 e.printStackTrace();
             }

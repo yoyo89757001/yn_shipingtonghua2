@@ -46,6 +46,7 @@
         android:theme="@style/AppTheme"
         tool:targetApi="n">
 
+
         <activity android:name=".ui.BaseActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -53,11 +54,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.RTCActivity" android:hardwareAccelerated="true" android:theme="@style/AppThemeFull"/>
-        <activity android:name=".ui.LogingActivity" />
-        <activity android:name=".ui.JiGouActivity" />
-        <activity android:name=".ui.PhoneZhiBoListActivity"/>
-        <activity android:name=".ui.PadZhiBoListActivity" />
+        <activity android:name=".ui.RTCActivity" android:hardwareAccelerated="true" android:theme="@style/AppThemeFull" android:screenOrientation="portrait"/>
+        <activity android:name=".ui.LogingActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ui.JiGouActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ui.PhoneZhiBoListActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ui.PadZhiBoListActivity" android:screenOrientation="portrait"/>
+
 
         <meta-data
             android:name="design_width_in_dp"
