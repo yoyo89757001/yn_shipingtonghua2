@@ -73,7 +73,7 @@ public class PadZhiBoListActivity extends AppCompatActivity {//平板端直播�
     private TextView t1,t2,t3;
     private EditText editText;
     private int type=1;
-
+//
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
