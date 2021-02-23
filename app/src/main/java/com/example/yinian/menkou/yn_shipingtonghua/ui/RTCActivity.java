@@ -109,11 +109,12 @@ public class RTCActivity extends AppCompatActivity implements View.OnClickListen
       mRoomId=getIntent().getStringExtra(Constant.ROOM_ID);
       mUserId=getIntent().getStringExtra(Constant.USER_ID);
       timeA=getIntent().getStringExtra("time");
-      isLR=getIntent().getBooleanExtra("isLR",false);
+      isLR=getIntent().getBooleanExtra("isLR",true);
         Log.d("eeeeee", mUserId+"mUserId");
         Log.d("eeeeee", mRoomId+"mRoomId");
         Log.d("eeeeee", isLR+"isLR");
         Log.d("eeeeee", timeA+"timeA");
+
 
 //        @SuppressLint("SimpleDateFormat")
 //        SimpleDateFormat formatter = new SimpleDateFormat("HH:mm:ss");

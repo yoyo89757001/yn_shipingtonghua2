@@ -199,7 +199,6 @@ public class PadZhiBoListActivity extends AppCompatActivity {//平板端直播�
                         loginApiunBind(DateUtils.timeb(System.currentTimeMillis()+172800000+"")+" 00:00",DateUtils.timeb(System.currentTimeMillis()+172800000+"")+" 23:50","");
                         break;
                 }
-
             }
         });
 
@@ -364,6 +363,7 @@ public class PadZhiBoListActivity extends AppCompatActivity {//平板端直播�
                             }
                             dangBeanList.add(kalaker);
                         }else {
+                            kalaker.setClick(true);
                             dangBeanList.add(kalaker);
                         }
                     }

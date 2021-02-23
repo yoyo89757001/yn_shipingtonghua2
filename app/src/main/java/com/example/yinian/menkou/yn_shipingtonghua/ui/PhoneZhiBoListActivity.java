@@ -156,7 +156,6 @@ public class PhoneZhiBoListActivity extends AppCompatActivity {//手机端直播
         String url = MyApplication.URL+"/app/elder/getElderInfoByAppoint";
         JSONObject json =new  JSONObject();
         JSONObject json2 =new  JSONObject();
-
         try {
             json.put("pageNum",1);
             json.put("pageSize",100);
